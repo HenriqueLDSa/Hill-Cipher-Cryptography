@@ -7,37 +7,37 @@ int main()
     FILE *key = fopen("k2.txt", "r");
     FILE *text = fopen("p2.txt", "r");
 
-    // int keySize = 0;
-    // fscanf(key, "%d", &keySize);
-    // int keyMatrix[keySize][keySize];
+    int keySize = 0;
+    fscanf(key, "%d", &keySize);
+    int keyMatrix[keySize][keySize];
 
-    // for(int i = 0; i < keySize; i++)
-    // {
-    //     for(int j = 0; j < keySize; j++)
-    //         fscanf(key, "%d", &keyMatrix[i][j]);
-    // }
+    for(int i = 0; i < keySize; i++)
+    {
+        for(int j = 0; j < keySize; j++)
+            fscanf(key, "%d", &keyMatrix[i][j]);
+    }
 
-    // char plainText[10000];
+    char plainText[10000];
 
-    // for(int i = 0; !feof(text); i++)
-    // {
-    //     plainText[i] = fgetc(text);
+    for(int i = 0; !feof(text); i++)
+    {
+        plainText[i] = fgetc(text);
         
-    //     if(plainText[i] >= 97 && plainText[i] <= 122)
-    //         continue;
-    //     else if(plainText[i] >= 65 && plainText[i] <= 90)
-    //         plainText[i]+=32;
-    //     else
-    //         i--;
-    // }
+        if(plainText[i] >= 97 && plainText[i] <= 122)
+            continue;
+        else if(plainText[i] >= 65 && plainText[i] <= 90)
+            plainText[i]+=32;
+        else
+            i--;
+    }
 
-    int keySize = 3;
-    int keyMatrix[3][3] = {{1,2,3},
-                           {4,5,6},
-                           {7,8,9}
-                          };
+    // int keySize = 3;
+    // int keyMatrix[3][3] = {{1,2,3},
+    //                        {4,5,6},
+    //                        {7,8,9}
+    //                       };
 
-    char plainText[] = "potato";
+    // char plainText[] = "potato";
     
     printf("\n");
     printf("Plaintext:\n%s", plainText);
