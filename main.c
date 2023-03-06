@@ -63,10 +63,10 @@ int main()
     int plainIntIndex = 0;
     int resultIndex = 0;
     while(resultIndex < strlen(plainText)){
-        for(int j = 0; j < keySize; j++)
+        for(int i = 0; i < keySize; i++)
         {
             int sumOfProds = 0;
-            for(int i = 0; i < keySize; i++)
+            for(int j = 0; j < keySize; j++)
             {
                 sumOfProds += (plainTextToInt[plainIntIndex] * keyMatrix[i][j]);
                 plainIntIndex++;
@@ -92,6 +92,9 @@ int main()
     printf("Ciphertext:\n%s", cipherText);
     printf("\n\n");
 
+    fclose(key);
+    fclose(text);
+
     return 0;
 }
 
@@ -102,3 +105,23 @@ int main()
 // Multiply plain text by matrix in groups of 3
 // Modulo 26 
 // Convert back to letter
+
+/*
+    int plainIntIndex = 0;
+    int resultIndex = 0;
+    while(resultIndex < strlen(plainText)){
+        for(int j = 0; j < keySize; j++)
+        {
+            int sumOfProds = 0;
+            for(int i = 0; i < keySize; i++)
+            {
+                sumOfProds += (plainTextToInt[plainIntIndex] * keyMatrix[i][j]);
+                plainIntIndex++;
+            }
+            result[resultIndex] = sumOfProds;
+            resultIndex++;
+            plainIntIndex -= keySize;
+        }
+        plainIntIndex += keySize;
+    }
+*/
