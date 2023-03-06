@@ -96,12 +96,5 @@ int main()
     fclose(text);
 
     return 0;
+    
 }
-
-// Read key matrix from file - DONE
-// Read plain text from file - DONE
-// Remove spaces, numbers, and lowercase any uppercase chars - DONE
-// Convert plain text to int - DONE
-// Multiply plain text by matrix in groups of 3
-// Modulo 26 
-// Convert back to letter
