@@ -14,8 +14,8 @@ This repository contains a simple C program for encrypting text using the Hill c
 
 - A C compiler (e.g., GCC, Clang) to compile the source code.
 - Two input files:
-  - A key file (`k2.txt`), which includes the size of the key matrix followed by the matrix elements.
-  - A plaintext file (`p2.txt`) containing the text to be encrypted.
+  - A key file ('k2.txt'), which includes the size of the key matrix followed by the matrix elements.
+  - A plaintext file ('p2.txt') containing the text to be encrypted.
 
 ## Compilation and Execution
 
