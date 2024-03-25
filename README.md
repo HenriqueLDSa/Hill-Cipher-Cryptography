@@ -21,12 +21,13 @@ This repository contains a simple C program for encrypting text using the Hill c
 
 To compile and run the program, use the following commands:
 
-```bash
+```
+```
 gcc main.c -o hillcipher
 ./hillcipher
 ```
 
-Ensure both `k2.txt` and `p2.txt` are present in the same directory as the executable, or adjust the file paths in the source code accordingly.
+Ensure both `k2.txt` and `p2.txt` are present in the same directory as the executable, or adjust the file paths in the source code accordingly. To run another key and plaintext files, change the file name in `main.c`
 
 ## Output
 
